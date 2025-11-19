@@ -40,12 +40,11 @@ services:
         sync: false  # Optional, set if needed
 
   # Frontend Service (Static Site)
-  - type: web
+  - type: static
     name: ritual-frontend
-    env: static
     region: frankfurt
     plan: starter
-    buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
+    buildCommand: cd frontend && npm install --legacy-peer-deps && VITE_API_BASE_URL=$VITE_API_BASE_URL npm run build
     staticPublishPath: ./frontend/dist
     envVars:
       - key: VITE_API_BASE_URL
