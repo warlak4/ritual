@@ -1,0 +1,194 @@
+{
+  "appName": "Ритуаль",
+  "tagline": "Система управления ритуальными услугами",
+  "actions": {
+    "login": "Войти",
+    "register": "Зарегистрироваться",
+    "logout": "Выйти",
+    "create": "Создать",
+    "save": "Сохранить",
+    "cancel": "Отменить",
+    "refresh": "Обновить",
+    "apply": "Применить",
+    "search": "Поиск",
+    "newOrder": "Новая заявка",
+    "assignResources": "Назначить ресурсы",
+    "exportCsv": "Экспорт CSV",
+    "viewAll": "Смотреть все"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "orders": "Заявки",
+    "clients": "Клиенты",
+    "ceremonies": "Церемонии",
+    "resources": "Ресурсы",
+    "analytics": "Аналитика",
+    "settings": "Настройки",
+    "hotkeys": "Горячие клавиши",
+    "catalog": "Каталог",
+    "store": "Магазин",
+    "cart": "Корзина"
+  },
+  "hotkeys": {
+    "title": "Горячие клавиши",
+    "newOrder": "Создать заявку",
+    "search": "Фокус на поиск",
+    "toggleLanguage": "Сменить язык",
+    "toggleTheme": "Сменить тему",
+    "saveSettings": "Сохранить настройки",
+    "saveFilter": "Сохранить фильтр",
+    "openAnalytics": "Открыть аналитику",
+    "openSchedule": "Открыть расписание"
+  },
+  "dashboard": {
+    "welcome": "Добро пожаловать, {{name}}",
+    "activeOrders": "Активные заявки",
+    "completedOrders": "Завершённые заявки",
+    "upcomingCeremonies": "Ближайшие церемонии",
+    "totalRevenue": "Выручка",
+    "ordersByStatus": "Заявки по статусу",
+    "revenueTrend": "Динамика выручки",
+    "inventoryPressure": "Нагрузка на инвентарь",
+    "scheduleOverview": "Ближайшие церемонии"
+  },
+  "orders": {
+    "title": "Управление заявками",
+    "createTitle": "Создание новой заявки",
+    "list": "Список заявок",
+    "status": {
+      "draft": "Черновик",
+      "pending": "На согласовании",
+      "confirmed": "Подтверждена",
+      "in_progress": "В работе",
+      "completed": "Завершена",
+      "cancelled": "Отменена"
+    },
+    "columns": {
+      "contract": "Номер договора",
+      "client": "Клиент",
+      "deceased": "Умерший",
+      "total": "Сумма",
+      "status": "Статус",
+      "createdAt": "Создана"
+    }
+  },
+  "clients": {
+    "title": "Клиентские карточки",
+    "createTitle": "Добавление клиента",
+    "columns": {
+      "name": "Имя",
+      "email": "Email",
+      "phone": "Телефон",
+      "vip": "VIP",
+      "notes": "Заметки"
+    }
+  },
+  "ceremonies": {
+    "title": "Расписание церемоний",
+    "assignTitle": "Назначение ресурсов"
+  },
+  "resources": {
+    "staff": "Персонал",
+    "vehicles": "Транспорт",
+    "inventory": "Инвентарь"
+  },
+  "analytics": {
+    "title": "Аналитика и отчёты",
+    "ordersChart": "Распределение заявок",
+    "revenueChart": "Выручка по периодам",
+    "inventoryChart": "Загрузка инвентаря"
+  },
+  "settings": {
+    "title": "Пользовательские настройки",
+    "theme": "Тема интерфейса",
+    "language": "Язык",
+    "dateFormat": "Формат даты",
+    "numberFormat": "Формат чисел",
+    "pageSize": "Размер страниц",
+    "savedFilters": "Сохранённые фильтры",
+    "saveSuccess": "Настройки успешно сохранены"
+  },
+  "auth": {
+    "loginTitle": "Вход в систему",
+    "registerTitle": "Регистрация клиента",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "phone": "Номер телефона",
+    "confirmPassword": "Подтвердите пароль"
+  },
+  "forms": {
+    "client": {
+      "fullName": "Полное имя",
+      "contactEmail": "Email для связи",
+      "contactPhone": "Телефон",
+      "notes": "Заметки",
+      "isVip": "VIP-клиент"
+    },
+    "order": {
+      "client": "Клиент",
+      "deceased": "Умерший",
+      "package": "Пакет услуг",
+      "services": "Услуги",
+      "currency": "Валюта",
+      "contractNumber": "Номер договора",
+      "totalAmount": "Сумма",
+      "addService": "Добавить услугу"
+    }
+  },
+  "notifications": {
+    "orderCreated": "Заявка успешно создана",
+    "clientCreated": "Клиент успешно добавлен",
+    "resourcesAssigned": "Ресурсы назначены",
+    "paymentRegistered": "Платёж зафиксирован",
+    "settingsSaved": "Настройки обновлены"
+  },
+  "roles": {
+    "admin": "Администратор",
+    "client": "Клиент",
+    "guest": "Гость"
+  },
+  "store": {
+    "title": "Каталог услуг",
+    "subtitle": "Выберите пакет или отдельные услуги для оформления заявки",
+    "packages": "Пакеты услуг",
+    "services": "Отдельные услуги",
+    "loading": "Загружаем предложения...",
+    "emptyPackages": "Пакеты пока недоступны",
+    "emptyServices": "Услуги пока недоступны",
+    "noDescription": "Описание скоро появится"
+  },
+  "client": {
+    "store": {
+      "title": "Каталог услуг",
+      "subtitle": "Выберите услуги для заказа",
+      "all": "Все",
+      "packages": "Пакеты услуг",
+      "services": "Услуги",
+      "searchPlaceholder": "Поиск услуг и товаров...",
+      "loading": "Загрузка...",
+      "emptyPackages": "Нет доступных пакетов",
+      "emptyServices": "Нет доступных услуг",
+      "noDescription": "Нет описания",
+      "addToCart": "В корзину",
+      "packageDescription": "Пакет из {{count}} услуг"
+    }
+  },
+  "cart": {
+    "title": "Корзина",
+    "subtitle": "Проверьте ваш заказ",
+    "empty": "Корзина пуста",
+    "goToStore": "Перейти в магазин",
+    "package": "Пакет",
+    "service": "Услуга",
+    "remove": "Удалить",
+    "total": "Итого",
+    "clear": "Очистить корзину",
+    "checkout": "Оформить заказ через Telegram",
+    "sending": "Отправка...",
+    "goToBot": "Перейдите в бота для оплаты",
+    "orderError": "Не удалось отправить заказ. Попробуйте еще раз.",
+    "phoneRequired": "Необходимо указать номер телефона в профиле"
+  }
+}

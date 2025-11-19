@@ -1,0 +1,194 @@
+{
+  "appName": "Ritual",
+  "tagline": "Funeral service management platform",
+  "actions": {
+    "login": "Sign in",
+    "register": "Register",
+    "logout": "Log out",
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "refresh": "Refresh",
+    "apply": "Apply",
+    "search": "Search",
+    "newOrder": "New order",
+    "assignResources": "Assign resources",
+    "exportCsv": "Export CSV",
+    "viewAll": "View all"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "clients": "Clients",
+    "ceremonies": "Ceremonies",
+    "resources": "Resources",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "hotkeys": "Hotkeys",
+    "catalog": "Catalog",
+    "store": "Store",
+    "cart": "Cart"
+  },
+  "hotkeys": {
+    "title": "Keyboard shortcuts",
+    "newOrder": "Create order",
+    "search": "Focus search",
+    "toggleLanguage": "Switch language",
+    "toggleTheme": "Toggle theme",
+    "saveSettings": "Save settings",
+    "saveFilter": "Save filter",
+    "openAnalytics": "Open analytics",
+    "openSchedule": "Open schedule"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {{name}}",
+    "activeOrders": "Active orders",
+    "completedOrders": "Completed orders",
+    "upcomingCeremonies": "Upcoming ceremonies",
+    "totalRevenue": "Revenue",
+    "ordersByStatus": "Orders by status",
+    "revenueTrend": "Revenue trend",
+    "inventoryPressure": "Inventory pressure",
+    "scheduleOverview": "Upcoming ceremonies"
+  },
+  "orders": {
+    "title": "Order management",
+    "createTitle": "Create new order",
+    "list": "Orders list",
+    "status": {
+      "draft": "Draft",
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "columns": {
+      "contract": "Contract",
+      "client": "Client",
+      "deceased": "Deceased",
+      "total": "Amount",
+      "status": "Status",
+      "createdAt": "Created"
+    }
+  },
+  "clients": {
+    "title": "Client records",
+    "createTitle": "Add client",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "vip": "VIP",
+      "notes": "Notes"
+    }
+  },
+  "ceremonies": {
+    "title": "Ceremony schedule",
+    "assignTitle": "Assign resources"
+  },
+  "resources": {
+    "staff": "Staff",
+    "vehicles": "Vehicles",
+    "inventory": "Inventory"
+  },
+  "analytics": {
+    "title": "Analytics & reports",
+    "ordersChart": "Order distribution",
+    "revenueChart": "Revenue timeline",
+    "inventoryChart": "Inventory load"
+  },
+  "settings": {
+    "title": "User preferences",
+    "theme": "Theme",
+    "language": "Language",
+    "dateFormat": "Date format",
+    "numberFormat": "Number format",
+    "pageSize": "Page size",
+    "savedFilters": "Saved filters",
+    "saveSuccess": "Preferences saved"
+  },
+  "auth": {
+    "loginTitle": "Sign in",
+    "registerTitle": "Client registration",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone number",
+    "confirmPassword": "Confirm password"
+  },
+  "forms": {
+    "client": {
+      "fullName": "Full name",
+      "contactEmail": "Contact email",
+      "contactPhone": "Phone",
+      "notes": "Notes",
+      "isVip": "VIP client"
+    },
+    "order": {
+      "client": "Client",
+      "deceased": "Deceased",
+      "package": "Service package",
+      "services": "Services",
+      "currency": "Currency",
+      "contractNumber": "Contract number",
+      "totalAmount": "Amount",
+      "addService": "Add service"
+    }
+  },
+  "notifications": {
+    "orderCreated": "Order created",
+    "clientCreated": "Client added",
+    "resourcesAssigned": "Resources assigned",
+    "paymentRegistered": "Payment registered",
+    "settingsSaved": "Preferences updated"
+  },
+  "roles": {
+    "admin": "Administrator",
+    "client": "Client",
+    "guest": "Guest"
+  },
+  "store": {
+    "title": "Service Catalog",
+    "subtitle": "Pick a package or individual services to build your order",
+    "packages": "Service packages",
+    "services": "Individual services",
+    "loading": "Loading offers...",
+    "emptyPackages": "Packages are not available yet",
+    "emptyServices": "Services are not available yet",
+    "noDescription": "Description will be available soon"
+  },
+  "client": {
+    "store": {
+      "title": "Service Catalog",
+      "subtitle": "Select services for order",
+      "all": "All",
+      "packages": "Service packages",
+      "services": "Services",
+      "searchPlaceholder": "Search for services and products...",
+      "loading": "Loading...",
+      "emptyPackages": "No packages available",
+      "emptyServices": "No services available",
+      "noDescription": "No description",
+      "addToCart": "Add to cart",
+      "packageDescription": "Package of {{count}} services"
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "subtitle": "Review your order",
+    "empty": "Cart is empty",
+    "goToStore": "Go to store",
+    "package": "Package",
+    "service": "Service",
+    "remove": "Remove",
+    "total": "Total",
+    "clear": "Clear cart",
+    "checkout": "Place order via Telegram",
+    "sending": "Sending...",
+    "goToBot": "Go to the bot for payment",
+    "orderError": "Failed to send order. Please try again.",
+    "phoneRequired": "Phone number must be specified in profile"
+  }
+}

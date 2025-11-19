@@ -1,0 +1,69 @@
+version: '3.9'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ritual_sqlserver
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: ${DB_PASSWORD:-YourStrong!Passw0rd}
+    ports:
+      - '1433:1433'
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ../db/scripts:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:7-alpine
+    container_name: ritual_redis
+    ports:
+      - '6379:6379'
+
+  minio:
+    image: quay.io/minio/minio:latest
+    container_name: ritual_minio
+    environment:
+      MINIO_ROOT_USER: ritual
+      MINIO_ROOT_PASSWORD: ritualSecret123
+    command: server /data --console-address ":9001"
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - minio_data:/data
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: ritual_backend
+    env_file:
+      - ../backend/.env.example
+    environment:
+      DB_HOST: sqlserver
+      DB_TRUST_CERT: 'true'
+      TELEGRAM_BOT_TOKEN: '8558062986:AAHAX6CTkUl2OIQmwAHqWC3QE25LKE2yieY'
+      TELEGRAM_CHAT_ID: '7222886369'
+      NODE_ENV: 'production'
+    depends_on:
+      - sqlserver
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: ritual_frontend
+    environment:
+      VITE_API_BASE_URL: http://localhost:3000
+    depends_on:
+      - backend
+    ports:
+      - '5173:80'
+
+volumes:
+  sqlserver_data:
+  minio_data:
+

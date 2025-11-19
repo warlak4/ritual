@@ -1,0 +1,53 @@
+services:
+  # Backend API Service
+  - type: web
+    name: ritual-backend
+    env: node
+    region: frankfurt
+    plan: starter
+    buildCommand: cd backend && npm install --legacy-peer-deps && npm run build
+    startCommand: cd backend && npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_HOST
+        sync: false  # Set in Render dashboard
+      - key: DB_PORT
+        value: 1433
+      - key: DB_USER
+        sync: false  # Set in Render dashboard
+      - key: DB_PASSWORD
+        sync: false  # Set in Render dashboard
+      - key: DB_NAME
+        value: RitualDB
+      - key: DB_ENCRYPT
+        value: "true"
+      - key: DB_TRUST_CERT
+        value: "true"
+      - key: DB_LOGGING
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CRYPTO_MASTER_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false  # Will be set to frontend URL
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false  # Optional, set if needed
+      - key: TELEGRAM_CHAT_ID
+        sync: false  # Optional, set if needed
+
+  # Frontend Service (Static Site)
+  - type: web
+    name: ritual-frontend
+    env: static
+    region: frankfurt
+    plan: starter
+    buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false  # Will be set to backend URL after deployment (e.g., https://ritual-backend.onrender.com)
+

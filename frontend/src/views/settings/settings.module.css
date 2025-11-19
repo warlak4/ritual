@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  background: var(--color-surface-strong);
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.form input,
+.form select {
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(65, 90, 119, 0.2);
+  background: rgba(65, 90, 119, 0.08);
+}
+
+.primary {
+  grid-column: 1 / -1;
+  justify-self: flex-start;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+}
+

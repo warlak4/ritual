@@ -1,0 +1,44 @@
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #1b2a41;
+  --color-primary-accent: #b38b59;
+  --color-secondary: #415a77;
+  --color-surface: #f5f7fb;
+  --color-surface-strong: #ffffff;
+  --color-border: #d6dbe6;
+  --color-text: #0f172a;
+  --color-text-muted: #4a5568;
+
+  --sidebar-width: 280px;
+
+  --shadow-sm: 0 8px 20px rgba(17, 24, 39, 0.08);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+[data-theme='dark'] {
+  --color-primary: #cbd5f5;
+  --color-primary-accent: #d9b88c;
+  --color-secondary: #7b8fb3;
+  --color-surface: #101623;
+  --color-surface-strong: #151c2d;
+  --color-border: #1f2937;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+
+  color-scheme: dark;
+}
+
+.brand-heading {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
