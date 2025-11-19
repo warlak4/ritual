@@ -10,13 +10,29 @@
 2. Зарегистрируйтесь или войдите через GitHub
 3. Подключите ваш GitHub аккаунт к Render
 
-## Шаг 3: Создание сервисов через Blueprint
+## Шаг 3: Создание Backend через Blueprint
 
 1. В Dashboard Render нажмите **"New"** → **"Blueprint"**
 2. Выберите репозиторий `warlak4/ritual`
-3. Render автоматически обнаружит файл `render.yaml` и создаст два сервиса:
+3. Render автоматически обнаружит файл `render.yaml` и создаст сервис:
    - `ritual-backend` (Backend API)
-   - `ritual-frontend` (Frontend SPA)
+
+## Шаг 3.5: Создание Frontend как Static Site
+
+⚠️ **Важно**: Frontend нужно создать отдельно, так как Render Blueprint не поддерживает статические сайты.
+
+1. В Dashboard Render нажмите **"New"** → **"Static Site"**
+2. Подключите тот же репозиторий `warlak4/ritual`
+3. Настройте следующие параметры:
+   - **Name**: `ritual-frontend`
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm install --legacy-peer-deps && VITE_API_BASE_URL=$VITE_API_BASE_URL npm run build`
+   - **Publish Directory**: `dist`
+   - **Region**: `Frankfurt` (или выберите ближайший)
+4. Добавьте переменную окружения:
+   - **Key**: `VITE_API_BASE_URL`
+   - **Value**: `https://ritual-backend.onrender.com` (URL будет доступен после деплоя backend)
+5. Нажмите **"Create Static Site"**
 
 ## Шаг 4: Настройка базы данных
 

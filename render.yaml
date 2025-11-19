@@ -33,20 +33,16 @@ services:
       - key: CRYPTO_MASTER_KEY
         generateValue: true
       - key: CORS_ORIGINS
-        sync: false  # Will be set to frontend URL
+        sync: false  # Will be set to frontend URL after deployment
       - key: TELEGRAM_BOT_TOKEN
         sync: false  # Optional, set if needed
       - key: TELEGRAM_CHAT_ID
         sync: false  # Optional, set if needed
 
-  # Frontend Service (Static Site)
-  - type: static_site
-    name: ritual-frontend
-    region: frankfurt
-    plan: starter
-    buildCommand: cd frontend && npm install --legacy-peer-deps && VITE_API_BASE_URL=$VITE_API_BASE_URL npm run build
-    staticPublishPath: ./frontend/dist
-    envVars:
-      - key: VITE_API_BASE_URL
-        sync: false  # Will be set to backend URL after deployment (e.g., https://ritual-backend.onrender.com)
+# Note: Frontend should be created separately as a Static Site in Render Dashboard
+# Go to: New > Static Site > Connect your repository
+# Root Directory: frontend
+# Build Command: npm install --legacy-peer-deps && VITE_API_BASE_URL=$VITE_API_BASE_URL npm run build
+# Publish Directory: dist
+# Environment Variable: VITE_API_BASE_URL=https://ritual-backend.onrender.com
 
