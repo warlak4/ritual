@@ -40,7 +40,7 @@ services:
         sync: false  # Optional, set if needed
 
   # Frontend Service (Static Site)
-  - type: static
+  - type: static_site
     name: ritual-frontend
     region: frankfurt
     plan: starter
